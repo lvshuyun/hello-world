@@ -1,0 +1,144 @@
+<extend name="TableNode1/base"/>
+<block name="blocktable">
+<input type='hidden' id="table_url" value="{$table_url}">
+<input type='hidden' id="root_name" value="增值税（一般纳税人使用）">
+<input type='hidden' id="table_name" value="汇总纳税企业增值税分配表">
+<input type='hidden' id="table_type" value="1">
+<table id="bodytable" width="1032px;">
+<tr class='titletr title-notic'>
+    <td colspan = '9' id='titletd'>汇总纳税企业增值税分配表</td>
+</tr>
+<tr class='titletr title-notic'>
+    <td colspan = '9' class='font-weight color-red'>（本期销售情况明细）</td>
+</tr>
+<tr class='titletr title-notic'>
+    <td colspan = '9'>所属日期：</td>
+</tr>
+<tr>
+    <td class='gauge-style text-left' style="height:28px;" colspan = '9'>汇总纳税企业增值税分配表-总机构信息</td>
+</tr>
+<tr>
+    <td colspan="3" class='gauge-style text-right' style="height:28px;">
+        总机构纳税人名称
+    </td>
+    <td class ='tddata gray' width='156px'>
+        <div class='divimage'></div>
+        <div class='divdata'></div>
+    </td>
+    <td class='gauge-style text-right' style="width:130px;">营业地址</td>
+    <td class ='tddata' width='156px'>
+        <div class='divimage'></div>
+        <div class='divdata'></div>
+    </td>
+    <td class='gauge-style text-right' style="width:130px;">联系电话</td>
+    <td colspan="2" class ='tddata'>
+        <div class='divimage'></div>
+        <div class='divdata'></div>
+    </td>
+</tr>
+<tr>
+    <td colspan="3" class='gauge-style text-right' style="height:28px;">
+        法定代表人名称
+    </td>
+    <td class ='tddata gray'>
+        <div class='divimage'></div>
+        <div class='divdata'></div>
+    </td>
+    <td class='gauge-style text-right'>
+        开户银行
+    </td>
+    <td class ='tddata' width='156px'>
+        <div class='divimage'></div>
+        <div class='divdata'></div>
+    </td>
+    <td class='gauge-style text-right'>
+        银行账号
+    </td>
+    <td colspan="2" class ='tddata'>
+        <div class='divimage'></div>
+        <div class='divdata'></div>
+    </td>
+</tr>
+<tr>
+    <td colspan="3" class='gauge-style text-right' style="height:28px;">
+        总机构纳税人识别号
+    </td>
+    <td class='gauge-style text-center'>
+        应补（退）税额
+    </td>
+    <td class='gauge-style text-center'>
+        总分机构销售额总计
+    </td>
+    <td class='gauge-style text-center'>
+        总机构销售收入
+    </td>
+    <td class='gauge-style text-center'>
+        比例分配
+    </td>
+    <td colspan="2" class='gauge-style text-center'>
+        总机构分配税额
+    </td>
+    
+</tr>
+<tr>    
+    <td colspan="3" class ='tddata gray' width='height:30px;'>
+        <div class='divimage'></div>
+        <div class='divdata'></div>
+    </td>
+    <td class ='tddata gray'>
+        <div class='divimage'></div>
+        <div class='divdata'></div>
+    </td>
+    <td class ='tddata gray'>
+        <div class='divimage'></div>
+        <div class='divdata'>0.00</div>
+    </td>
+    <td class ='tddata'>
+        <div class='divimage'></div>
+        <div class='divdata'>0.00</div>
+    </td>
+    <td class ='tddata'>
+        <div class='divimage'></div>
+        <div class='divdata'>100.000000%</div>
+    </td>
+    <td colspan="2" class ='tddata'>
+        <div class='divimage'></div>
+        <div class='divdata'>0.00</div>
+    </td>
+</tr>
+<tr>
+    <td class='gauge-style text-left' style="height:28px;" colspan = '9'>分支机构情况</td>
+</tr>
+<tr>
+    <td class='gauge-style text-center' style="width:53px;height:56px;">
+        <input type='button' value='增加'>
+        <input type='button' value='删除'>
+    </td>
+    <td class='gauge-style text-center' style='width:53px'>序列</td>
+    <td class='gauge-style text-center' style='width:145px'>分支机构纳税人识别号</td>
+    <td class='gauge-style text-center' >分支机构名称</td>
+    <td class='gauge-style text-center' >分支机构销售收入</td>
+     <td class='gauge-style text-center' >分支机构分配比例</td>
+    <td class='gauge-style text-center' colspan="3">分支机构分配配额</td>
+</tr>
+
+<tr>
+    <td class='gauge-style text-left' style="height:28px;" colspan = '9'>附加信息</td>
+</tr>
+<tr>
+    <td class='gauge-style text-center bgcol-write' style="height:28px;" colspan = '3'>主管税务机关审核意见</td>
+    <td class='gauge-style text-left bgcol-write' style="height:28px;" colspan = '9'></td>
+</tr>
+<tr>
+    <td colspan="2" class='gauge-style text-center bgcol-write' style="height:30px;">报送单位</td>
+    <td class='gauge-style text-center bgcol-write'></td>
+    <td class='gauge-style text-center bgcol-write'>主管税务机关</td>
+    <td class='gauge-style text-center bgcol-write'></td>
+    <td class='gauge-style text-center bgcol-write'>受理人员</td>
+    <td class='gauge-style text-center bgcol-write' ></td>
+    <td class='gauge-style text-center bgcol-write' style='width:100px'>受理日期</td>
+    <td class='gauge-style text-center bgcol-write' style='width:100px'></td>
+</tr>
+</table>
+</block>
+</extend>

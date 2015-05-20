@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <style type="text/css">
+        #lct td {
+            TEXT-ALIGN: center; PADDING-TOP: 50px; border: solid 0px #ccc;
+        }
+        #lct .title {
+            MARGIN-TOP: 5px; FONT-WEIGHT: bold
+        }
+        #lct .dh {
+            CURSOR: pointer
+        }
+        .jz {
+            height: 50px;border: solid 0px #ccc; width: 60px; margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+<TABLE id=lct width=800 border="0" style="margin: 0 auto;">
+    <TBODY>
+    <TR>
+        <TD colSpan=5 >
+            <DIV style="WIDTH: 526px; margin: 0 auto;" class=jz>
+                <DIV style="WIDTH: 270px; margin: 0 auto; text-align: center; BACKGROUND: url(__COMMON__/icon/liuchengtu.png) no-repeat; HEIGHT: 45px">
+                    </DIV></DIV></TD></TR>
+    <TR>
+        <TD rowSpan=2 align=middle>
+            <DIV style="BACKGROUND: url(__COMMON__/icon/home-icon.png) no-repeat; "
+                    class="jz dh" onclick=main.onRegeidt();></DIV>
+            <DIV class=title>修改注册信息</DIV></TD>
+        <TD width="20%" align=middle>
+            <DIV style="BACKGROUND: url(__COMMON__/icon/qitagongneng.png) no-repeat;"
+                    class=jz></DIV>
+            <DIV class=title>财务报表</DIV></TD>
+        <TD rowSpan=2 align=middle>
+            <DIV style="BACKGROUND: url(__COMMON__/icon/home-icon4.png) no-repeat;"
+                    class=jz></DIV>
+            <DIV class=title>不同税种间审核</DIV></TD>
+        <TD width="20%" align=middle>
+            <DIV style="BACKGROUND: url(__COMMON__/icon/home-shenbao.png) no-repeat; width: 46px;"
+                    class="jz dh"
+                    onclick="navTab.openTab('9300001', '/hlwsb/sbkk/sb.html', {title:'网上申报',external:true});"></DIV>
+            <DIV class=title>申报</DIV></TD>
+        <TD width="20%" align=middle>
+            <DIV style="BACKGROUND: url(__COMMON__/icon/home-icon4.png) no-repeat;"
+                    class="jz dh"
+                    onclick="navTab.openTab('9300005', '/hlwsb/sbkk/dzjkpz.html', {title:'电子税票查询打印',external:true});"></DIV>
+            <DIV class=title>打印税票</DIV></TD></TR>
+    <TR>
+        <TD align=middle>
+            <DIV style="BACKGROUND: url(__COMMON__/icon/qitagongneng.png) no-repeat;"
+                    class=jz></DIV>
+            <DIV class=title>其他报表</DIV></TD>
+        <TD align=middle>
+            <DIV style=" BACKGROUND: url(__COMMON__/icon/home-icon3.png) no-repeat;"
+                    class="jz dh"
+                    onclick="navTab.openTab('9300002', '/hlwsb/sbkk/kk.html', {title:'实时扣款',external:true})"></DIV>
+            <DIV class=title>扣款</DIV></TD>
+        <TD align=middle>
+            <DIV style="BACKGROUND: url(__COMMON__/icon/home-icon4.png) no-repeat;"
+                    class="jz dh"
+                    onclick="navTab.openTab('9500090', '/hlwsb/cxdy/cxdy.html', {title:'查询打印',external:true})"></DIV>
+            <DIV class=title>打印申报表</DIV></TD></TR></TBODY></TABLE>
+</body>
+</html>

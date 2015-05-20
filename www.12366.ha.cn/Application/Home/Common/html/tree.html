@@ -1,0 +1,387 @@
+<script type="text/javascript">
+    Ext.onReady(function() {
+
+        /**
+         * tree
+         * 在这里添加树节点
+         */
+        var treepanel = Ext.create('Ext.tree.Panel', {
+            id: 'treeview',
+            rootVisible: true,
+            border: false,
+            store: Ext.create('Ext.data.TreeStore', {
+                root: {
+                    text: '我的权限',
+                    border:false,
+                    expanded: true,
+                    children: [{
+                        text: "增值税（一般纳税人使用）",
+                        expanded: true,
+                        children: [{
+                            text: "增值纳税申报表（一般纳税人使用）",
+                            leaf: true,
+                            url: "__APP__/Home/TableNode1/table1"
+                        },{
+                            text: "增值纳税申报表附列资料（一）",
+                            leaf: true,
+                            url: "__APP__/Home/TableNode1/table2"
+                        },{
+                            text: "增值纳税申报表附列资料（二）",
+                            leaf: true,
+                            url: "__APP__/Home/TableNode1/table3"
+                        },{
+                            text: "增值纳税申报表附列资料（三）",
+                            leaf: true,
+                            url: "__APP__/Home/TableNode1/table4"
+                        },{
+                            text: "增值纳税申报表附列资料（四）",
+                            leaf: true,
+                            url: "__APP__/Home/TableNode1/table5"
+                        },{
+                            text: "固定资产进项税额抵扣情况表",
+                            leaf: true,
+                            url: "__APP__/Home/TableNode1/table6"
+                        },{
+                            text: "增值税运输发票抵扣清单",
+                            leaf: true,
+                            url: "__APP__/Home/TableNode1/table7"
+                        },{
+                            text: "代扣代缴税收通用缴款书抵扣清单",
+                            leaf: true,
+                            url: "__APP__/Home/TableNode1/table8"
+                        },{
+                            text: "汇总纳税企业增值税分配表",
+                            leaf: true,
+                            url: "__APP__/Home/TableNode1/table9"
+                        }]
+                    },{
+                        text: "增值税农产品核定抵扣（增值税一般纳税人使用）",
+                        children: [{
+                            text: "农产品核定扣除增值税进项税额计算表",
+                            leaf: true,
+                            url: "__APP__/Home/TableNode2/table1"
+                        },{
+                            text: "投入产出法核定农产品增值税进项税额计算表",
+                            leaf: true,
+                            url: "__APP__/Home/TableNode2/table2"
+                        },{
+                            text: "成本法核定增值税进项税额计算表",
+                            leaf: true,
+                            url: "__APP__/Home/TableNode2/table3"
+                        },{
+                            text: "购进农产品直接销售核定农产品增值税",
+                            leaf: true,
+                            url: "__APP__/Home/TableNode2/table4"
+                        },{
+                            text: "购进农产品用于生产经营且不构成货物实体核定",
+                            leaf: true,
+                            url: "__APP__/Home/TableNode2/table5"
+                        }]
+                    },{
+                        text:'关联业务往来报告表',
+                        border: false,
+                        expanded: false,
+                        children:[{
+                            text:'封面',
+                            leaf: true,
+                            url:''
+                        },{
+                            text:'关联关系表（表一）',
+                            leaf: true,
+                            url:''
+                        },{
+                            text:'关联交易汇总表（表二）',
+                            leaf: true,
+                            url:''
+                        },{
+                            text:'购销表（表三）',
+                            leaf: true,
+                            url:''
+                        },{
+                            text:'劳务表（表四）',
+                            leaf: true,
+                            url:''
+                        },{
+                            text:'无形资产表（表五）',
+                            leaf: true,
+                            url:''
+                        },{
+                            text:'固定资产表（表六）',
+                            leaf: true,
+                            url:''
+                        },{
+                            text:'融通资金表（表七）',
+                            leaf: true,
+                            url:''
+                        },{
+                            text:'对外支付款项表（表九）',
+                            leaf: true,
+                            url:''
+                        }]
+                    },{
+                        text:'居民企业所得税（据实预缴新）',
+                        border: false,
+                        expanded: false,
+                        children:[{
+                            text:'企业所得税月（季）度纳税申报表（A类）',
+                            leaf: true,
+                            url:'__APP__/Home/TableNode6/table1'
+                        },{
+                            text:'汇总纳税分支机构所得税分配表',
+                            leaf: true,
+                            url:'__APP__/Home/TableNode6/table2'
+                        },{
+                            text:'居民企业参股外国企业信息报告表',
+                            leaf: true,
+                            url:'__APP__/Home/TableNode6/table3'
+                        },{
+                            text:'固定资产加速折旧（扣除）预缴情况统计表',
+                            leaf: true,
+                            url:'__APP__/Home/TableNode6/table4'
+                        }]
+                    },{
+                        text:'居民企业所得税2014（年报A）',
+                        border: false,
+                        expanded: true,
+                        children:[{
+                            text:'A000000企业基础信息表',
+                            leaf: true,
+                            url:'__APP__/Home/TableNode4/table1'
+                        },{
+                            text:'企业所得税年度纳税申报表填报表单',
+                            leaf: true,
+                            url:'__APP__/Home/TableNode4/table2'
+                        },{
+                            text:'A0000000中华人民共和国企业所得税年度终...',
+                            leaf: true,
+                            url: '__APP__/Home/TableNode4/table3'
+                        },{
+                            text: 'A101010一般企业收入明细表',
+                            leaf: true,
+                            url:'__APP__/Home/TableNode4/table4'
+                        },{
+                            text:'A102010一般企业成本支出明细表',
+                            leaf: true,
+                            url:'__APP__/Home/TableNode4/table5'
+                        },{
+                            text:'A104000期间费用明细表',
+                            leaf: true,
+                            url:''
+                        },{
+                            text:'A105000纳税调整项目明细表',
+                            leaf: true,
+                            url:''
+                        },{
+                            text:'A105050职工薪酬纳税调整明细表',
+                            leaf: true,
+                            url:''
+                        },{
+                            text:'A105080资产折旧、摊销情况及纳税调整明细表',
+                            leaf: true,
+                            url:''
+                        },{
+                            text:'A105081固定资产加速折旧、扣除明细表',
+                            leaf: true,
+                            url:''
+                        },{
+                            text:'A105090资产损失税前扣除及纳税调整明细表',
+                            leaf: true,
+                            url:''
+                        },{
+                            text:'A106000企业所得税弥补亏损明细表',
+                            leaf: true,
+                            url:''
+                        }]
+                    },{
+                        text:'一般企业财务报表',
+                        border:true,
+                        expanded: true,
+                        children: [{
+                            text: '财务报表（月／季）',
+                            expanded: true,
+                            children:[{
+                                text:'资产负债表',
+                                leaf: true,
+                                url: '__APP__/Home/TableNode5/table1'
+                            },{
+                                text: '利润表',
+                                leaf: true,
+                                url: '__APP__/Home/TableNode5/table2'
+                            },{
+                                text: '现金流量表',
+                                leaf: true,
+                                url: '__APP__/Home/TableNode5/table3'
+                            },{
+                                text: '所有者权益变动表',
+                                leaf: true,
+                                url: ''
+                            }]
+                        },{
+                            text:'财务报表（年度）',
+                            children:[{
+                                text:'资产负债表',
+                                leaf: true,
+                                url: '__APP__/Home/TableNode5/table5'
+                            },{
+                                text: '利润表',
+                                leaf: true,
+                                url: '__APP__/Home/TableNode5/table6'
+                            },{
+                                text: '现金流量表',
+                                leaf: true,
+                                url: '__APP__/Home/TableNode5/table7'
+                            },{
+                                text: '所有者权益变动表',
+                                leaf: true,
+                                url: ''
+                            }]
+                        }]
+                    },{
+                        text: '海关稽核',
+                        border: false,
+                        children: [{
+                            text: '海关缴款书采集报表',
+                            leaf: true,
+                            url: ''
+                        },{
+                            text: '接收结果通知书列表',
+                            leaf: true,
+                            url: ''
+                        },{
+                            text: '接收结果明细',
+                            leaf: true,
+                            url: ''
+                        },{
+                            text: '海关稽核结果通知书查询打印',
+                            leaf: true,
+                            url: ''
+                        },{
+                            text: '当月发票明细查询',
+                            leaf: true,
+                            url: ''
+                        },{
+                            text: '海关第一联数据接收结果查询',
+                            leaf: true,
+                            url: ''
+                        }]
+                    },{
+                        text:'申报、实时扣款',
+                        border:false,
+                        children:[{
+                            text: '网上申报',
+                            leaf: true,
+                            url: ''
+                        },{
+                            text: '实时扣款',
+                            leaf: true,
+                            url: ''
+                        },{
+                            text: '申报结果查询',
+                            leaf: true,
+                            url: ''
+                        },{
+                            text: '扣款结果查询',
+                            leaf: true,
+                            url: ''
+                        },{
+                            text: '电子税票打印',
+                            leaf: true,
+                            url: ''
+                        }]
+
+                    },{
+                        text: '查询打印',
+                        border: false,
+                        children:[{
+                            text: '查询打印',
+                            leaf: true,
+                            url: '__APP__/Home/Print/index_'
+                        }]
+                    }]
+                }
+            })
+        });
+
+        var tabpanel = new Ext.TabPanel({
+            id: 'tabpanel',
+            deferredRender: true,
+            activeTab: 0,
+            items: [
+                {
+                    title: '我的主页',
+                    html: '<iframe frameborder="0" src="__APP__/Home/Default/home"  width="100%" height="100%"></iframe>',
+                    icon: '__COMMON__/icon/myhome.png'
+                }
+            ]
+        });
+
+        treepanel.on({
+            //单击事件
+            'itemclick': function(view, rcd, item, idx, event, eOpts) {
+                var url = rcd.get('url');
+                var text = rcd.get('text');
+                if (url) {
+                    var items = tabpanel.items.items;
+                    for (var i=0; i< items.length; i++) {
+                        if (items[i].title == text && items[i].url == url) {
+                            tabpanel.setActiveTab(i);
+                            return;
+                        }
+                    }
+                    tabpanel.add({
+                        url: url,
+                        title: text,
+                        closable: true,
+                        html: "<iframe frameborder='0' scrolling='no' width='100%' height='100%' style='background-color: #E6E4D1; margin:0;padding:0' src="+url+"></iframe>"
+                    }).show();
+                }
+            }
+        });
+
+        var viewPort = new Ext.Viewport({
+            layout: "border",
+            renderTo: Ext.getBody(),
+            items: [{
+                id:"north",
+                region: "north",
+                border: false,
+                height: 95,
+                bodyStyle: 'background: #E7F1F2;',
+                html: '<iframe src="__APP__/Home/Default/top" height="100%" width="100%" frameborder="0" scrolling="no"></iframe>'
+            },{
+                id:"south",
+                region: "south",
+                border: false,
+                height: 27,
+                bodyStyle: 'background: #E7F1F2',
+                html: '<div style="padding-top: 5px; padding-right: 30px; text-align: right;">技术支持：航天金穗 河南百旺</div>'
+            },{
+                id: "east",
+                region: "east",
+                border: false,
+                width: 5,
+                bodyStyle: 'background: #E7F1F2'
+            },{
+                id: "west",
+                title: '<b style="color: #000;">功能菜单</b>',
+                region: "west",
+                split: true,
+                collapsible: true,
+                width: 250,
+                items: [treepanel],
+                layout: 'fit'
+            },{
+                id: 'center',
+                region: "center",
+                split: false,
+                border: false,
+                bodyStyle: 'background: #E7F1F2',
+                items: [tabpanel],
+                layout: 'fit'
+            }]
+        });
+     });
+
+
+
+</script>

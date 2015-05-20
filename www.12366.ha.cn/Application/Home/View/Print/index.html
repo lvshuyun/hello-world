@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <include file="Public/Home/headFile.html" />
+    <link rel="stylesheet" type="text/css" href="__COMMON__/css/tableList.css" media="all">
+    <script src="__COMMON__/js/jquery-1.4.3.min.js"></script>
+    <style type="text/css">
+        .top-tool{border: 1px solid #ccc; height: 35px; width: 100%;}
+        .top-tool td{text-align: center;}
+        #button-search{margin-left: 5px;;padding-top:2px; text-align:center; font-size:9pt;  text-decoration: none;display:block;width: 75px;height: 23px; background: url("__COMMON__/icon/button_bg.jpg") no-repeat; color: #000;}
+        .help-icon{width:25px;height: 25px;background: url("__COMMON__/icon/help_bg.jpg"); float: right; margin-right: 5px;}
+        .line-dotted{ margin-top: 5px; background: url("__COMMON__/icon/line_bg.jpg") repeat; height: 1px;}
+        .a-print{text-decoration: none; color: #0f0f0f;}
+        .a-print:hover{text-decoration: underline; color: #0000FC;}
+    </style>
+    <script type="text/javascript">
+
+        //extjs
+        Ext.onReady(function () {
+
+            var myDate = new Date();
+            var year = myDate.getFullYear();
+            var month = myDate.getMonth()+1;
+            if (month<10){
+                month = "0"+month;
+            }
+            var firstDay = year+"-"+month+"-01";
+            var myDate = new Date(year,month,0);
+            var lastDay = year+"-"+month+"-"+myDate.getDate();
+
+            Ext.create('Ext.form.DateField', {
+                id:'start-date-field',
+                width: 90,
+                renderTo: 'start-time',
+                format: 'Y-m-d',
+                editable: false,
+                allowBlank: false,
+                value: firstDay
+            });
+
+            Ext.create('Ext.form.DateField', {
+                id:'end-date-field',
+                width: 90,
+                renderTo: 'end-time',
+                format: 'Y-m-d',
+                editable: false,
+                allowBlank: false,
+                value: lastDay
+            });
+
+
+            Ext.get('bodydiv').setHeight(document.documentElement.clientHeight);
+            Ext.fly('bodydiv').setStyle({
+                overflow: 'auto'
+            });
+        });
+
+        //jquery
+        $(document).ready(function(){
+
+            $('#table_root tr').click(function () {
+                operation($(this));
+            });
+
+            $("#button-search").click(function(){
+
+                var start_time = Ext.util.Format.date(new Date(Ext.getCmp('start-date-field').getValue()), 'Y-m-d');
+                var end_time = Ext.util.Format.date(new Date(Ext.getCmp('end-date-field').getValue()), 'Y-m-d');
+
+                Ext.Ajax.request({
+                    url: '__ROOT__/index.php/Home/Print/query_root',
+                    params: {
+                        start_time: start_time,
+                        end_time: end_time,
+                        select_type: $('input[name="check-time"]:checked').val()
+                    },
+                    success: function (response) {
+                        var array = Ext.util.JSON.decode(response.responseText);
+                        if (Ext.typeOf(array) == 'array') {
+                            $("#table-root-list tr:gt(0)").remove();
+                            $("#table-list-data tr:gt(0)").remove();
+                            var coun = array.length;
+                            for(var i=0;i<coun; i++) {
+                                $('#table-root-list').append('<tr> <td>'+parseInt(i+1)+'</td> <td>'+array[i].start_time+'</td> <td>'+array[i].end_time+'</td> <td class="long-td">'+array[i].root_name+'</td> </tr>');
+                            }
+                        }
+
+                        $('#table_root tr').click(function () {
+                            operation($(this));
+                        });
+                    }
+                });
+
+            });
+        });
+
+        function operation(obj) {
+            var start_time = obj.children().eq(1).text();
+            var end_time = obj.children().eq(2).text();
+            var root_name = obj.children().eq(3).text();
+
+            Ext.Ajax.request({
+                url: '__ROOT__/index.php/Home/Print/query',
+                params: {
+                    start_time: start_time,
+                    end_time: end_time,
+                    root_name: root_name
+                },
+                success: function(response){
+
+                    var array = Ext.util.JSON.decode(response.responseText);
+
+                    if (Ext.typeOf(array) == 'array') {
+                        $("#table-list-data tr:gt(0)").remove();
+                        var coun = array.length;
+                        for(var i=0;i<coun; i++) {
+                            $('#table-list-data').append('<tr> <td>'+ parseInt(i+1) +'</td> <td>'+array[i].start_time+'</td> <td>'+array[i].end_time+'</td> <td class="long-td">'+array[i].table_name+'</td> <td> <a id="'+i+'" class="a-print" href="#">打印</a></td> </tr>');
+                        }
+                    }
+
+                    $(".a-print").click(function(){
+//                        alert(array[$(this).attr('id')].table_data);
+                        alert($('#bodydiv').html());
+                    });
+                }
+            });
+        }
+
+    </script>
+</head>
+<body  style="background-color:#FFFFFF; ">
+<div id="bodydiv">
+    <table class="top-tool" rules="all">
+        <tr>
+            <td width="160px">
+                <input checked type="radio" value="1" name="check-time">&nbsp;申报日期&nbsp;
+                <input type="radio" value="2" name="check-time">&nbsp;所属日期&nbsp;
+            </td>
+            <td width="80px">开始日期：</td>
+            <td id="start-time" width="100px"></td>
+            <td width="80px">结束日期：</td>
+            <td id="end-time" width="100px"></td>
+            <td width="150px;" style="text-align: left;">
+                <a href="#" id="button-search">查询(Q)</a>
+            </td>
+            <td>
+                <div class="help-icon"></div>
+            </td>
+        </tr>
+    </table>
+
+    <div class="line-dotted"></div>
+
+    <div id="table_root" class="div-frame-list-root" style="margin-top: 5px; overflow: 'auto'">
+        <table class="table-list" id="table-root-list" rules="all">
+            <tr class="tr-head">
+                <th width="60px">序号</th>
+                <th width="100px">所属日起</th>
+                <th width="100px">所属期止</th>
+                <th width="350px" class="long-td">报表类型名称</th>
+                <th class="th-empty">&nbsp;</th>
+            </tr>
+            <php>$n=1;</php>
+            <foreach name="table_root_list" item="vo">
+                <tr>
+                    <td>{$n}</td>
+                    <td>{$vo[start_time]}</td>
+                    <td>{$vo[end_time]}</td>
+                    <td class="long-td">{$vo[root_name]}</td>
+                </tr>
+            </foreach>
+        </table>
+    </div>
+    <div class="div-frame-list-root" style="margin-top: 10px; height: 400px;">
+        <table class="table-list" id="table-list-data" rules="all">
+            <tr class="tr-head">
+                <th width="60px">序号</th>
+                <th width="100px">所属日起</th>
+                <th width="100px">所属期止</th>
+                <th width="350px" class="long-td">报表类型名称</th>
+                <th width="150px">操作</th>
+                <th class="th-empty">&nbsp;</th>
+            </tr>
+        </table>
+    </div>
+    </div>
+</body>
+</html>

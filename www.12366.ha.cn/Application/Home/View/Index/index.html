@@ -1,0 +1,78 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><link href="https://wssb.12366.ha.cn/commons/js/sc/skins/blue.css" rel="stylesheet" id="lhgdialoglink">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=7">
+    <title>河南省国家税务局互联网申报系统</title>
+
+    <link href="__COMMON__/login/main.css" rel="stylesheet" type="text/css">
+    <link href="__COMMON__/login/cms_login.css" rel="stylesheet" type="text/css">
+
+    <script type="text/javascript">
+        function clearInput() {
+            document.getElementById('input_id').value="";
+            document.getElementById('input_pwd').value="";
+        }
+    </script>
+</head>
+<body class="admin_home_body"><div class="" style="left: 0px; top: 0px; visibility: hidden; position: absolute;"><table class="ui_border"><tbody><tr><td class="ui_lt"></td><td class="ui_t"></td><td class="ui_rt"></td></tr><tr><td class="ui_l"></td><td class="ui_c"><div class="ui_inner"><table class="ui_dialog"><tbody><tr><td colspan="2"><div class="ui_title_bar"><div class="ui_title" unselectable="on" style="cursor: move;"></div><div class="ui_title_buttons"><a class="ui_min" href="javascript:void(0);" title="最小化" style="display: inline-block;"><b class="ui_min_b"></b></a><a class="ui_max" href="javascript:void(0);" title="最大化" style="display: inline-block;"><b class="ui_max_b"></b></a><a class="ui_res" href="javascript:void(0);" title="还原"><b class="ui_res_b"></b><b class="ui_res_t"></b></a><a class="ui_close" href="javascript:void(0);" title="关闭(esc键)" style="display: inline-block;">×</a></div></div></td></tr><tr><td class="ui_icon" style="display: none;"></td><td class="ui_main" style="width: auto; height: auto;"><div class="ui_content" style="padding: 10px;"></div></td></tr><tr><td colspan="2"><div class="ui_buttons" style="display: none;"></div></td></tr></tbody></table></div></td><td class="ui_r"></td></tr><tr><td class="ui_lb"></td><td class="ui_b"></td><td class="ui_rb" style="cursor: se-resize;"></td></tr></tbody></table></div>
+<form action="" id="formlogin">
+    <table cellspacing="0" cellpadding="0" class="admin_home_container">
+        <tbody><tr>
+            <td>
+                <div style="float: right;margin-right: 300px;font-size: 60px;font-weight: bold;">
+                    <a style="color: white;" target="_blank" href="http://wssb2.12366.ha.cn/">进入旧版申报</a>
+                </div>
+                <div style="clear: both;"></div>
+                <table border="0" cellspacing="0" cellpadding="0" class="admin_home_login">
+                    <tbody><tr>
+                        <td colspan="2">
+                            <img src="__COMMON__/login/logo_img.png" height="169">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" class="admin_home_tdbg">
+                            <table border="0" cellspacing="0" cellpadding="0" class="admin_home_info">
+
+                                <tbody><tr>
+                                    <td colspan="3"><span id="msg"></span></td>
+                                </tr>
+                                <tr>
+                                    <td class="td_text">用户帐号：</td>
+                                    <td colspan="2" class="td_bg"><label>
+                                        <input name="USER_ZH" type="text" id="input_id" class="input_bg" maxlength="32" value="">
+                                    </label></td>
+                                </tr>
+                                <tr>
+                                    <td class="td_text">用户口令：</td>
+                                    <td colspan="2" class="td_bg"><label>
+                                        <input name="USER_MM" type="password" id="input_pwd" class="input_bg" maxlength="32" value="" onkeydown="if(event.keyCode==13){event.keyCode=9;login.onLogin();}">
+                                    </label></td>
+                                </tr>
+                                <tr>
+                                    <td>&nbsp;</td>
+                                    <td colspan="2"><label>
+                                        <input type="button" name="button" id="button" value=" " class="submit_bg" onclick='window.location.href="__APP__/Home/TableNode1/index"'>
+                                        <input type="button" name="button2" id="button2" value=" " class="reset_bg" onclick="clearInput()" >
+                                    </label></td>
+                                </tr>
+
+
+                                </tbody></table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><img src="__COMMON__/login/admin_h31.jpg" width="425" height="135">
+                        </td>
+                        <td><img src="__COMMON__/login/admin_h32.jpg" width="400" height="135">
+                        </td>
+                    </tr>
+                    </tbody></table>
+            </td>
+        </tr>
+        </tbody></table>
+
+    <object id="DCellWeb1" classid="clsid:3F166327-8030-4881-8BD2-EA25350E574A" codebase="https://wssb.12366.ha.cn/CellWeb5.CAB#version=5,3,9,15">
+    </object>
+
+
+</form></body></html>

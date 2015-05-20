@@ -1,0 +1,7 @@
+.div-frame-list-root{ border: 1px solid #000000; height: 400px;}
+.table-list{ width: 100%; border: 1px solid #c5c5c5;}
+.table-list .tr-head{text-align: center;height: 25px; background:url("../icon/table_head_bg.jpg") repeat; border-top: 2px solid #a1311f; }
+.table-list .th-empty{border:1px solid #f1f1f1;}
+.table-list .long-td{text-align: left;}
+.table-list .tr-bg-color{background-color: #f9f9f9;}
+.table-list td {height: 25px; text-align: center;}

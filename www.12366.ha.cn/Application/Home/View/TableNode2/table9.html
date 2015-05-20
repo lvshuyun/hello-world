@@ -1,0 +1,149 @@
+<extend name="TableNode1/base"/>
+<block name="blocktable">
+<input type='hidden' id="table_url" value="{$table_url}">
+<input type='hidden' id="root_name" value="增值税农产品核定抵扣（增值税一般纳税人使用）">
+<input type='hidden' id="table_name" value="汇总纳税企业增值税分配表">
+<input type='hidden' id="table_type" value="1">
+<table id="bodytable" width="">
+<tr class='titletr title-notic'>
+    <td colspan = '6' id='titletd'>汇总纳税企业增值税分配表</td>
+</tr>
+<tr class='titletr title-notic'>
+    <td colspan = '6' class='font-weight color-red'>（本期销售情况明细）</td>
+</tr>
+<tr class='titletr'>
+    <td colspan = '6'>所属日期：</td>
+</tr>
+<tr>
+    <td class='gauge-style text-left' style="height:28px;" colspan = '6'>汇总纳税企业增值税分配表-总机构信息</td>
+</tr>
+<tr>
+    <td class='gauge-style text-right' style="width:242px;height:28px;">
+        总机构纳税人名称
+    </td>
+    <td class ='tddata gray' width='156px'>
+        <div class='divimage'></div>
+        <div class='divdata'></div>
+    </td>
+    <td class='gauge-style text-right' style="width:129px;height:28px;">
+        营业地址
+    </td>
+    <td class ='tddata' width='156px'>
+        <div class='divimage'></div>
+        <div class='divdata'></div>
+    </td>
+    <td class='gauge-style text-right' style="width:129px;height:28px;">
+        联系电话
+    </td>
+    <td class ='tddata' width='156px'>
+        <div class='divimage'></div>
+        <div class='divdata'></div>
+    </td>
+</tr>
+<tr>
+    <td class='gauge-style text-right' style="width:242px;height:28px;">
+        法定代表人名称
+    </td>
+    <td class ='tddata gray' width='156px'>
+        <div class='divimage'></div>
+        <div class='divdata'></div>
+    </td>
+    <td class='gauge-style text-right' style="width:129px;height:28px;">
+        开户银行
+    </td>
+    <td class ='tddata' width='156px'>
+        <div class='divimage'></div>
+        <div class='divdata'></div>
+    </td>
+    <td class='gauge-style text-right' style="width:129px;height:28px;">
+        银行账号
+    </td>
+    <td class ='tddata' width='156px'>
+        <div class='divimage'></div>
+        <div class='divdata'></div>
+    </td>
+</tr>
+<tr>
+    <td class='gauge-style text-right' style="width:242px;height:28px;">
+        总机构纳税人识别号
+    </td>
+    <td class='gauge-style text-center' style="width:129px;">
+        应补（退）税额
+    </td>
+    <td class='gauge-style text-center' style="width:129px;">
+        总分机构销售额总计
+    </td>
+    <td class='gauge-style text-center' style="width:129px;">
+        总机构销售收入
+    </td>
+    <td class='gauge-style text-center' style="width:129px;">
+        比例分配
+    </td>
+    <td class='gauge-style text-center' style="width:129px;">
+        总机构分配税额
+    </td>
+    
+</tr>
+<tr>    
+    <td class ='tddata gray' width='height:30px;'>
+        <div class='divimage'></div>
+        <div class='divdata'></div>
+    </td>
+    <td class ='tddata gray' width='156px'>
+        <div class='divimage'></div>
+        <div class='divdata'></div>
+    </td>
+    <td class ='tddata gray' width='156px'>
+        <div class='divimage'></div>
+        <div class='divdata'>0.00</div>
+    </td>
+    <td class ='tddata' width='156px'>
+        <div class='divimage'></div>
+        <div class='divdata'>0.00</div>
+    </td>
+    <td class ='tddata' width='156px'>
+        <div class='divimage'></div>
+        <div class='divdata'>100.000000%</div>
+    </td>
+    <td class ='tddata' width='156px'>
+        <div class='divimage'></div>
+        <div class='divdata'>0.00</div>
+    </td>
+</tr>
+<tr>
+    <td class='gauge-style text-left' style="height:28px;" colspan = '6'>分支机构情况</td>
+</tr>
+<tr>
+    <td class='gauge-style text-center' style="width:53px;height:56px;">
+        <input type='button' value='增加'>
+        <input type='button' value='删除'>
+    </td>
+    <td class='gauge-style text-center' style='width:58px'>序列</td>
+    <td class='gauge-style text-center' style='width:85px'>扣缴人纳税人识别号</td>
+    <td class='gauge-style text-center' style="width:85px;">扣缴人名称</td>
+    <td class='gauge-style text-center' colspan="2" style='width:85px'>征收机关名称</td>
+</tr>
+
+<tr>
+    <td class='gauge-style text-center' style="width:53px;height:28px;"></td>
+    <td class='gauge-style text-center' style='width:58px'>合计</td>
+    <td class ='tddata'>
+        <div class='divimage'></div>
+        <div class='divdata none-center'>--</div>
+    </td>
+    <td class ='tddata'>
+        <div class='divimage'></div>
+        <div class='divdata none-center'>--</div>
+    </td>
+    <td class ='tddata'>
+        <div class='divimage'></div>
+        <div class='divdata none-center'>--</div>
+    </td>
+    <td class ='tddata'>
+        <div class='divimage'></div>
+        <div class='divdata none-center'>--</div>
+    </td>
+</tr>
+</table>
+</block>
+</extend>

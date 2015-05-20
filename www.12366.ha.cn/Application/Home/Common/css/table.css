@@ -1,0 +1,139 @@
+body{
+	margin:0px;
+	padding:0px;
+}
+#bodydiv{
+	/*	width:950px;
+	height:100%;
+	float:left;*/
+}
+table{
+	border-collapse: collapse;
+	border:0px solid #111111;
+	background-color: #ffffff;
+    padding:0px;
+    border-spacing:0;
+}
+table td{
+	border:1px solid #111111;
+	height:22px;
+    padding: 0px;
+    border-spacing:0;
+}
+/*数据靠左*/
+.text-left{
+	text-align: left;
+}
+/*数据居中*/
+.text-center{
+	text-align: center;
+}
+/*数据居中*/
+.text-right{
+	text-align: right;
+}
+/*表头单元格背景样式*/
+.gauge-style{
+	background-color: #C8D8FA;
+	font-size: 12px;
+}
+
+/*数据部分样式 --默认右边显示*/
+.tddata{
+	text-align: right;
+	font-size: 13px;
+	font-family: '宋体';
+}
+/*绿色*/
+.green{
+	background-color: #CFFDCE;
+}
+/*灰色*/
+.gray{
+	background-color: #C0C0C0;
+}
+/*字体蓝色*/
+.color-blue{
+	color:#0000FC;
+}
+.titletr{
+	font-size: 12px;
+}
+.titletr td{
+	border:0px solid;
+}
+.title-notic{
+	text-align: center;
+}
+#titletd{
+	font-size: 21px;
+	font-weight: 600;
+}
+.divimage{
+	width:5px;
+	height:5px;
+	margin-top:-3px;
+	margin-right:1px;
+	float:right;
+}
+.divdata{
+	float:right;
+	margin-right:-3px;
+}
+.trfoot{
+    height: 22px;
+    font-size: 13px;
+}
+.trtdfoot{
+    height: 22px;
+    font-size: 13px;
+    border:0px solid;
+}
+.trtdfoot td{
+    height: 22px;
+    font-size: 13px;
+    border:0px solid;
+}
+.input-align-right{
+    border-top:0px solid;
+    text-align:right;
+    padding-right:30px;
+    font-size: 13px;
+}
+.border-bottom-none{
+    padding-top:10px;
+    vertical-align: text-top;
+    border-bottom:0px solid;
+}
+.border-top-none{
+    border-top: 0px solid;
+}
+/*--样式*/
+.none-center{
+    margin-right:50px;
+}
+/*字体样式*/
+.color-red{
+	color:red;
+}
+.font-weight{
+	font-weight: 600;
+}
+
+
+/*鼠标移到td元素上添加黑色边框*/
+.black-border{
+    border: 2px solid #fff;
+}
+/*背景色*/
+.bgcol-write{
+	background-color: #ffffff;
+}
+
+.border-left-right{
+	border-left: 1px solid;
+	border-right: 1px solid;
+}
+.border-bottom{
+	border-bottom: 1px solid;
+}
